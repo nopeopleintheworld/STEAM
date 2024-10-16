@@ -54,7 +54,7 @@
         <button class="button clear-logs" id="clearLogsBtn">清除所有打卡紀錄</button>
         <button class="button" id="downloadCsvBtn">下載打卡紀錄 (CSV)</button>
         <button class="button" id="adminLogoutBtn">管理員登出</button>
-        
+
         <h3>新增用戶</h3>
         <div class="input-group">
             <input type="text" id="newUsername" placeholder="新用戶名" required>
@@ -64,14 +64,17 @@
         </div>
         <button class="button" id="addUserBtn">新增用戶</button>
         <div class="error" id="addUserErrorMsg"></div>
-        
+
+        <h3>用戶列表</h3>
+        <div id="userList"></div>
+
         <h3>刪除用戶</h3>
         <select id="userSelect">
             <option value="">選擇用戶</option>
         </select>
         <button class="button" id="deleteUserBtn">刪除用戶</button>
         <div class="error" id="deleteUserErrorMsg"></div>
-        
+
         <h3>所有用戶積分管理</h3>
         <div class="user-points-container" id="userPointsContainer"></div>
         <button class="button" id="downloadUserPointsCsvBtn">下載用戶積分 (CSV)</button>
