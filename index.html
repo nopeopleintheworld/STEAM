@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打卡系統</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>打卡系統</h1>
+        <div id="loginContainer">
+            <div class="input-group">
+                <input type="text" id="loginUsername" placeholder="用戶名" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="密碼" required>
+            </div>
+            <button class="button" id="loginBtn">登入</button>
+            <div class="error" id="errorMsg"></div>
+        </div>
+    
+        <div id="checkInContainer" class="hidden">
+            <button class="button" id="checkInBtn">打卡</button>
+            <div class="status" id="checkInStatus"></div>
+            <div class="error" id="checkInErrorMsg"></div>
+            <div class="points" id="pointsDisplay">當前積分: 0</div>
+            <button class="button" id="logoutBtn">登出</button>
+    
+            <div class="reward-section" id="rewardSection">
+                <h2>積分兌換</h2>
+                <div class="reward-option" data-cost="10">
+                    <span>小禮物 (10 分)</span>
+                    <button class="button redeemBtn">兌換</button>
+                </div>
+                <div class="reward-option" data-cost="20">
+                    <span>代金券 (20 分)</span>
+                    <button class="button redeemBtn">兌換</button>
+                </div>
+                <div class="reward-option" data-cost="50">
+                    <span>大禮物 (50 分)</span>
+                    <button class="button redeemBtn">兌換</button>
+                </div>
+                <div class="used-coupons" id="usedCouponsContainer">
+                    <h3>已兌換的禮品</h3>
+                    <ul id="usedCouponsList"></ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id="adminContainer" class="hidden">
+            <h2>管理員功能</h2>
+            <button class="button clear-logs" id="clearLogsBtn">清除所有打卡紀錄</button>
+            <button class="button" id="downloadCsvBtn">下載打卡紀錄 (CSV)</button>
+            <button class="button" id="adminLogoutBtn">管理員登出</button>
+            <h3>所有用戶積分管理</h3>
+            <div class="user-points-container" id="userPointsContainer"></div>
+            <button class="button" id="downloadUserPointsCsvBtn">下載用戶積分 (CSV)</button>
+        </div>
+    </div>
+
+
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
