@@ -8,18 +8,19 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>打卡系統</h1>
-    <div id="loginContainer">
-        <div class="input-group">
-            <input type="text" id="loginUsername" placeholder="用戶名" required>
+    <div class="container">
+        <h1>打卡系統</h1>
+        <div id="loginContainer">
+            <div class="input-group">
+                <input type="text" id="loginUsername" placeholder="用戶名" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="密碼" required>
+            </div>
+            <button class="button" id="loginBtn">登入</button>
+            <div class="error" id="errorMsg"></div>
         </div>
-        <div class="input-group">
-            <input type="password" id="loginPassword" placeholder="密碼" required>
-        </div>
-        <button class="button" id="loginBtn">登入</button>
-        <div class="error" id="errorMsg"></div>
-    </div>
+    
 
     <div id="checkInContainer" class="hidden">
         <button class="button" id="checkInBtn">打卡</button>
@@ -78,6 +79,10 @@
         <h3>所有用戶積分管理</h3>
         <div class="user-points-container" id="userPointsContainer"></div>
         <button class="button" id="downloadUserPointsCsvBtn">下載用戶積分 (CSV)</button>
+    </div>
+
+    <div class="footer">
+        <h4>Created by 林卓文</h4>
     </div>
 </div>
 
